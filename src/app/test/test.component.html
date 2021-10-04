@@ -1,0 +1,25 @@
+<!-- With one Test -->
+<!-- <h2>{{test.name | uppercase}} Details</h2>
+<div>
+  <span>id:</span>
+  {{test.id}}
+</div>
+<div>
+  <span>name:</span>
+  {{test.name}}
+</div>
+
+<div>
+  <label for="name">update name:</label>
+  <input type="text" id="name" [(ngModel)]="test.name" placeholder="name">
+</div> -->
+
+<!-- With array of tests -->
+<h2>Me and the Harry Potter Cast</h2>
+<ul class="tests">
+  <li *ngFor="let test of tests" (click)="onSelect(test)" [class.selected]="test === selectedTest">
+    <span class="badge">{{test.id}}:</span> {{test.name}}
+  </li>
+</ul>
+
+<app-test-detail [test]="selectedTest"></app-test-detail>

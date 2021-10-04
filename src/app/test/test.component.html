@@ -17,9 +17,11 @@
 <!-- With array of tests -->
 <h2>Me and the Harry Potter Cast</h2>
 <ul class="tests">
-  <li *ngFor="let test of tests" (click)="onSelect(test)" [class.selected]="test === selectedTest">
-    <span class="badge">{{test.id}}:</span> {{test.name}}
+  <li *ngFor="let test of tests">
+    <a routerLink="/details/{{test.id}}">
+      <span class="badge">{{test.id}}:</span> {{test.name}}
+    </a>
   </li>
 </ul>
 
-<app-test-detail [test]="selectedTest"></app-test-detail>
+<!-- <app-test-detail [test]="selectedTest"></app-test-detail> -->

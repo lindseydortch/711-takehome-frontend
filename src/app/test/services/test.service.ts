@@ -17,4 +17,10 @@ export class TestService {
     this.messageService.add('Message Service')
     return tests;
   }
+
+  getTest(id: number): Observable<Test>{
+    const test = TESTS.find(t => t.id === id)!;
+    this.messageService.add(`TestService: fetched test id: ${id}`);
+    return of(test);
+  }
 }

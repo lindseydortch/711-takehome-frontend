@@ -24,17 +24,12 @@ export class TestComponent implements OnInit {
   tests: Test[] = [];
 
   // with array of tests after adding click event 
-  selectedTest?: Test;
+  // selectedTest?: Test;
 
-  constructor(private testService: TestService, private messageService: MessageService) {}
+  constructor(private testService: TestService) {}
 
   ngOnInit() {
     this.getTests();
-  }
-
-  onSelect(test: Test): void {
-    this.selectedTest = test;
-    this.messageService.add(`TestComponent: Selected test id: ${test.id}`)
   }
 
   getTests(): void {

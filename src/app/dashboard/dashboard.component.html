@@ -1,0 +1,7 @@
+<h2>Top Tests</h2>
+
+<div class="tests-menu">
+  <a *ngFor="let test of tests" routerLink="/details/{{test.id}}">
+    {{test.name}}
+  </a>
+</div>

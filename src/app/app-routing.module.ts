@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { TestComponent } from './test/test.component';
-import { MessagesComponent } from './messages/messages.component';
+import { PokemonsComponent } from './pokemons/pokemons.component';
+import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 
 const routes: Routes = [
-  { path: 'tests', component: TestComponent},
-  { path: 'messages', component: MessagesComponent}
-];
-
-
+  { path: 'pokemons', component: PokemonsComponent },
+  { path: 'pokemon/:id', component: PokemonDetailComponent}
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

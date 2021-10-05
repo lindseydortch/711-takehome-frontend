@@ -1,0 +1,6 @@
+<div *ngFor="let pokemon of Pokemons">
+  <p>{{pokemon.name}}</p>
+  <a routerLink="/pokemon/{{pokemon.name}}">
+    Show Me This Pokemon
+  </a>
+</div>

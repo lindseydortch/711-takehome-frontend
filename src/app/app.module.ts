@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
-import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
-import { TestDetailComponent } from './test/test-detail/test-detail.component';
-import { MessagesComponent } from './messages/messages.component';
+import { PokemonsComponent } from './pokemons/pokemons.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
-    TestDetailComponent,
-    MessagesComponent
+    PokemonsComponent,
+    PokemonDetailComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

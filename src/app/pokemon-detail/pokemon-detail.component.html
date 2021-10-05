@@ -1,1 +1,8 @@
-<p>{{pokemon.name}}</p>
+<p>{{Pokemon.name}}</p>
+<!-- <p>{{Pokemon.sprites.front_shiny}}</p> -->
+<img src={{Pokemon.sprites.front_shiny}}>
+<p>{{Pokemon.weight}}</p>
+<p>Generations here: </p>
+<div *ngFor="let move of Pokemon.moves">
+  <p>{{move.move.name}}</p>
+</div>

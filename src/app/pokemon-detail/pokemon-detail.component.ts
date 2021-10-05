@@ -10,7 +10,7 @@ import { PokemonsService } from '../pokemons/services/pokemons.service';
 })
 export class PokemonDetailComponent implements OnInit {
 
-  Pokemon: any = [];
+  Pokemon: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,8 +23,12 @@ export class PokemonDetailComponent implements OnInit {
   }
 
   fetchPoke(): void {
-    const name = this.route.snapshot.params.get('name');
-    this.pokemonsService.getOnePoke(name)
-      .subscribe(pokemon => this.Pokemon = pokemon )
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.pokemonsService.getOnePoke(id)
+      .subscribe((data) => {
+        this.Pokemon = data
+        console.log(data)
+        console.log(Object.keys(this.Pokemon.sprites.versions).length)
+      })
   }
 }

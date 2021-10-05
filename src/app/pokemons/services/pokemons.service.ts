@@ -11,7 +11,7 @@ import { Pokemon } from '../pokemons-interface';
 })
 export class PokemonsService {
 
-  private readonly pokesURL = 'https://pokeapi.co/api/v2/pokemon';
+  private readonly pokesURL = 'http://localhost:3000/poke';
 
   constructor(
     private http: HttpClient,
@@ -26,11 +26,10 @@ export class PokemonsService {
     )
   }
 
-  getOnePoke(name: string): Observable<Pokemon>{
-    return this.http.get<Pokemon>(`${this.pokesURL}/${name}`).pipe(
+  getOnePoke(id: number): Observable<Pokemon>{
+    return this.http.get<Pokemon>(`http://localhost:3000/poke/${id}`).pipe(
       map((data: any) => {
-        console.log(data.results)
-        return data.results
+        return data
       })
     )
   } 

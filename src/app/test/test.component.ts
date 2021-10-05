@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TESTS } from './mock-test';
+// import { TESTS } from './mock-test';
 import { Test } from './test';
 import { TestService } from './services/test.service';
 import { MessageService } from '../messages/services/message.service';

@@ -24,14 +24,27 @@ export class TestDetailComponent implements OnInit {
     this.getTest();
   }
 
+  // getTest(): void {
+  //   const url = String(this.route.snapshot.paramMap.get('url'));
+  //   this.testService.getTest(url)
+  //     .subscribe(test => this.test = test);
+  // }
+
   getTest(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.testService.getTest(id)
-      .subscribe(test => this.test = test);
+    return console.log(`return later`)
   }
 
   goBack(): void {
     this.location.back();
   }
+
+  save(): void {
+    if (this.test) {
+      this.testService.updateTest(this.test)
+        .subscribe(() => this.goBack())
+    }
+  }
+
+  
 
 }

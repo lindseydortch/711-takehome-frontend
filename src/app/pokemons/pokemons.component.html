@@ -1,7 +1,9 @@
-<div *ngFor="let pokemon of Pokemons; let indexOfElement=index;">
-  <p>{{indexOfElement}}</p>
-  <p>{{pokemon.name}}</p>
-  <a routerLink="/pokemon/${indexOfElement | number}">
-    Show Me This Pokemon
-  </a>
-</div>
+<section class="card-container">
+  <div *ngFor="let pokemon of Pokemons; let indexOfElement=index;" class="card">
+    <!-- <p>{{indexOfElement}}</p> -->
+    <p>{{pokemon.name}}</p>
+    <a routerLink="/pokemon/${indexOfElement | number}" class="btn">
+      Show Me This Pokemon
+    </a>
+  </div>
+</section>

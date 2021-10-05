@@ -1,1 +1,146 @@
 /* You can add global styles to this file, and also import other style files */
+// ============================================================================
+// VARIABLES 
+// ============================================================================
+
+// COLORS 
+$yellow-light: #ffcb05;
+$blue-light: #2a75bb;
+$yellow-dark: #c7a008;
+$blue-dark: #3c5aa6;
+
+// FONTS 
+$app-font: 'Shadows Into Light', cursive;
+
+// ============================================================================
+// BASE
+// ============================================================================
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $app-font;
+  background-color: $yellow-light;
+}
+
+a {
+  text-decoration: none;
+}
+
+// ============================================================================
+// REUSABLE
+// ============================================================================
+.btn {
+  padding: 1rem;
+  border-radius: 5rem;
+  font-size: 2rem;
+  cursor: pointer;
+
+  &Blue {
+    background-color: $blue-dark;
+    color: white;
+  }
+}
+
+.u-margin-top-sm {
+  margin-top: 2rem;
+}
+
+// ============================================================================
+// Header
+// ============================================================================
+
+h1 {
+  font-size: 5rem;
+  color: $blue-dark;
+  text-align: center;
+}
+
+.dashboard {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+// ============================================================================
+// Pokemons
+// ============================================================================
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  & .card {
+    padding: 3rem;
+    background-color: $blue-dark;
+    color: #fff;
+    border-radius: .5rem;
+    margin: 2rem;
+    text-align: center;
+
+    & p {
+      font-size: 3rem;
+    }
+  }
+
+}
+
+// ============================================================================
+// Pokemon Detail
+// ============================================================================
+.pokeDetail {
+  background-color: $blue-dark;
+  border-radius: .5rem;
+  margin-top: 1.5rem;
+  color: #fff;
+  padding: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & p {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+img {
+  width: 15rem;
+}
+
+
+.movesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  & .moves {
+    background-color: $yellow-light;
+    padding: 2rem;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    margin: 1rem;
+  }
+}

@@ -28,11 +28,13 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   font-family: $app-font;
   background-color: $yellow-light;
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -47,6 +49,11 @@ a {
 
   &Blue {
     background-color: $blue-dark;
+    color: white;
+  }
+
+  &Yellow {
+    background-color: $yellow-dark;
     color: white;
   }
 }
